@@ -3,8 +3,8 @@
   "name": "QuickTranslate - Instant Text Translator",
   "version": "1.0.0",
   "description": "Instantly translate selected text to Hindi and 20+ languages. Right-click to translate, copy results, and hear pronunciations.",
-  "author": "Your Name",
-  "homepage_url": "https://github.com/yourusername/quicktranslate",
+  "author": "Deepak",
+  "homepage_url": "https://github.com/deepak29333/quick-translate",
   "permissions": [
     "activeTab",
     "contextMenus",
@@ -13,30 +13,37 @@
   "host_permissions": [
     "https://api.mymemory.translated.net/*"
   ],
+  "privacy_policy": "https://github.com/deepak29333/quick-translate/blob/main/PRIVACY.md",
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["content.css"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ]
     }
   ],
   "action": {
     "default_popup": "popup.html",
     "default_title": "QuickTranslate - Instant Text Translator",
     "default_icon": {
-      "16": "icons/icon16.png",
-      "32": "icons/icon32.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
     }
   },
   "icons": {
-    "16": "icons/icon16.png",
-    "32": "icons/icon32.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
   }
 }
