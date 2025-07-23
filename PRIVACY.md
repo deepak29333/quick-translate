@@ -1,6 +1,9 @@
 
-QuickTranslate does not collect, store, or share any personal information.
+**QuickTranslate** does not collect, store, or transmit any personal or sensitive user data.
 
-Selected text is sent securely to the [MyMemory Translation API](https://mymemory.translated.net/doc/privacy.php) for the sole purpose of translating the text. This information is not logged or stored by the extension itself.
+The extension works by sending selected text to the **MyMemory Translation API** (https://mymemory.translated.net) in order to fetch translations in real time. This request is made securely and is only used to perform the translation.
 
-No data is transmitted to or stored by the developer
+No information is stored by the extension, and no user data is collected or shared.
+
+You can review the privacy policy of the MyMemory API here:
+[https://mymemory.translated.net/doc/privacy.php](https://mymemory.translated.net/doc/privacy.php)
