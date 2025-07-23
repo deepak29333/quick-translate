@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 380px;
+      min-height: 450px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8f9fa;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    
+    .header p {
+      margin: 8px 0 0 0;
+      opacity: 0.9;
+      font-size: 14px;
+    }
+    
+    .content {
+      padding: 24px 20px;
+    }
+    
+    .section {
+      margin-bottom: 24px;
+    }
+    
+    .section h3 {
+      margin: 0 0 12px 0;
+      font-size: 16px;
+      color: #333;
+      font-weight: 600;
+    }
+    
+    .language-selector {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      font-size: 14px;
+      background: white;
+      transition: border-color 0.2s ease;
+      font-family: inherit;
+    }
+    
+    .language-selector:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+    
+    .instructions {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .instructions h4 {
+      margin: 0 0 12px 0;
+      color: #495057;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    .instructions ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .instructions li {
+      margin-bottom: 8px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #6c757d;
+    }
+    
+    .status {
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .status.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .status.updated {
+      background: #cce7ff;
+      color: #004085;
+      border: 1px solid #99d3ff;
+    }
+    
+    .features {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .features h4 {
+      margin: 0 0 12px 0;
+      color: #495057;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    .features ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .features li {
+      margin-bottom: 8px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #6c757d;
+    }
+    
+    .highlight {
+      background: linear-gradient(120deg, #a8e6cf 0%, #dcedc1 100%);
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border-left: 4px solid #28a745;
+    }
+    
+    .highlight h4 {
+      margin: 0 0 8px 0;
+      color: #155724;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .highlight p {
+      margin: 0;
+      color: #155724;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🌐 Text Translator</h1>
+    <p>Instant translation for selected text</p>
+  </div>
+  
+  <div class="content">
+    <div class="highlight">
+      <h4>✨ Auto-Translation Active</h4>
+      <p>Simply select any text on a webpage to see instant Hindi translation!</p>
+    </div>
+    
+    <div class="section">
+      <h3>🎯 Target Language</h3>
+      <select id="languageSelect" class="language-selector">
+        <option value="hi">Hindi (हिन्दी)</option>
+        <option value="es">Spanish (Español)</option>
+        <option value="fr">French (Français)</option>
+        <option value="de">German (Deutsch)</option>
+        <option value="it">Italian (Italiano)</option>
+        <option value="pt">Portuguese (Português)</option>
+        <option value="ru">Russian (Русский)</option>
+        <option value="ja">Japanese (日本語)</option>
+        <option value="ko">Korean (한국어)</option>
+        <option value="zh">Chinese (中文)</option>
+        <option value="ar">Arabic (العربية)</option>
+        <option value="tr">Turkish (Türkçe)</option>
+        <option value="nl">Dutch (Nederlands)</option>
+        <option value="sv">Swedish (Svenska)</option>
+        <option value="da">Danish (Dansk)</option>
+        <option value="no">Norwegian (Norsk)</option>
+        <option value="fi">Finnish (Suomi)</option>
+        <option value="pl">Polish (Polski)</option>
+        <option value="cs">Czech (Čeština)</option>
+        <option value="hu">Hungarian (Magyar)</option>
+      </select>
+    </div>
+    
+    <div class="status success" id="status">
+      🚀 Extension ready! Select text to translate.
+    </div>
+    
+    <div class="section">
+      <div class="instructions">
+        <h4>📖 How to Use:</h4>
+        <ol>
+          <li><strong>Select text</strong> on any webpage</li>
+          <li><strong>Translation appears automatically</strong> in a popup</li>
+          <li><strong>Copy translation</strong> with one click</li>
+          <li><strong>Listen to pronunciation</strong> using text-to-speech</li>
+          <li><strong>Right-click menu</strong> also available for translation</li>
+        </ol>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="features">
+        <h4>⚡ Features:</h4>
+        <ul>
+          <li>🔄 Automatic translation on text selection</li>
+          <li>🗣️ Support for 20+ languages</li>
+          <li>📋 One-click copy functionality</li>
+          <li>🔊 Text-to-speech for pronunciation</li>
+          <li>⚡ Fast & lightweight</li>
+          <li>🎯 Smart popup positioning</li>
+          <li>🌙 Dark mode support</li>
+          <li>📱 Mobile-friendly design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
